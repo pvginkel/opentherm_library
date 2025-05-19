@@ -168,7 +168,8 @@ bool IRAM_ATTR OpenTherm::onTxTimer(gptimer_handle_t timer, const gptimer_alarm_
         {
             self->setIdleState();
         }
-        self->txIndex++;
+
+        self->txIndex = self->txIndex + 1;
     }
     else
     {
