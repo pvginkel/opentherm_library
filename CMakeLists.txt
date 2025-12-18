@@ -1,9 +1,9 @@
-cmake_minimum_required(VERSION 3.5)
-
 idf_component_register(
     SRCS "src/OpenTherm.cpp"
     INCLUDE_DIRS "." "src"
-    PRIV_REQUIRES arduino
-    )
+    REQUIRES arduino-esp32
+)
 
-project (OpenTherm)
+if (CMAKE_COMPILER_IS_GNUCC)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-missing-field-initializers -Wno-switch -Wno-deprecated-enum-enum-conversion")
+endif()

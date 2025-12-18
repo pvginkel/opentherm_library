@@ -1,0 +1,9 @@
+description: OpenTherm
+url: https://github.com/pvginkel/opentherm_library
+dependencies:
+  idf: ">=5.5"
+  espressif/arduino-esp32: "*"
+files:
+  exclude:
+    - ".github"
+    - "examples"
